@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+
+        body {
+        font-family: 'VT323', Arial, sans-serif;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        }
+
+        /* Header Section */
+        .header-container {
+            background-color: #d18f44;
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 80%;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .header-container p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        /* Menu Section */
+        .container {
+            padding: 20px;
+        }
+
+        /* Header Buttons - Positioned in top left */
+        .header-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .top-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-family: 'VT323', Arial, sans-serif;
+        }
+
+        .top-button {
+            background-color: #1e5086;
+            color: #5af8d1;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            font-family: 'VT323', Arial, sans-serif;
+        }
+
+        .top-button:hover {
+            background-color: #45a049;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            padding: 20px;
+            background-color: #747272;
+            font-family: 'VT323', Arial, sans-serif;
+        }
+
+        nav button {
+            padding: 20px 50px;
+            background-color: #1e5086;
+            color: #5af8d1;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 19px;
+            font-family: 'VT323', Arial, sans-serif;
+        }
+
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            padding: 20px;
+            height: 400px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-container">
+        <h1>Dunia Fauna Indonesia</h1>
+        <p>Satwa Langka dan Habitatnya</p>
+        <div class="header-buttons">
+            <a href="beranda.html" target="showframe"><button class="top-button">Beranda</button></a>
+            <a href="kritikdansaran.html" target="showframe"><button class="top-button">Kritik dan Saran</button></a>
+        </div>
+    </header>
+    <!-- Navigasi Menu -->
+    <div>
+        <nav>
+            <a href="Jawa.html" target="showframe">
+                <button>Pulau Jawa</button>
+            </a>
+            <a href="Kalimantan.html" target="showframe">
+                <button>Pulau Kalimantan</button>
+            </a>
+            <a href="Sumatera.html" target="showframe">
+                <button>Pulau Sumatra</button>
+            </a>
+            <a href="Sulawesi.html" target="showframe">
+                <button>Pulau Sulawesi</button>
+            </a>
+            <a href="Papua.html" target="showframe">
+                <button>Pulau Papua</button>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

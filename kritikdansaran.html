@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Masukan</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'VT323', sans-serif;
+            font-size: 15px;
+            color: #333;
+        }
+
+        /* Background video container */
+        .background-video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styling the form table */
+        table {
+            margin: 5% auto;
+            width: 800px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #5998b1;
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        td {
+            padding: 15px;
+            vertical-align: top;
+        }
+
+        td input, td select, td textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        td input[type="radio"], td input[type="checkbox"] {
+            width: auto;
+        }
+
+        td textarea {
+            resize: none;
+        }
+
+        /* Buttons */
+        input[type="submit"], input[type="reset"] {
+            background-color: #5998b1;
+            color: rgb(14, 13, 13);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'VT323';
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        /* Gaya untuk scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px; /* Lebar scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f100; /* Warna track scrollbar */
+            border-radius: 5px; /* Membuat ujung track melengkung */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Warna thumb scrollbar */
+            border-radius: 10px; /* Membuat thumb melengkung */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #55555500; /* Warna thumb saat hover */
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #5998b1;
+        }
+
+        /* Center align buttons */
+        td[colspan="3px"] {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background video -->
+    <div class="background-video-container">
+        <video autoplay muted loop>
+            <source src="Bg1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Form content -->
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Masukan</title>
+</head>
+<body>
+    <form id="feedbackForm">
+        <table border="1" cellpadding="10px">
+            <tr>
+                <th colspan="2">Tingkatkan Layanan Kami: Berikan Masukan Anda</th>
+            </tr>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" id="namaLengkap" placeholder="Masukkan Nama Lengkap"></td>
+            </tr>
+            <tr>
+                <td>Tempat Tanggal Lahir:</td>
+                <td>
+                    <input type="text" id="tempatLahir" placeholder="Masukkan Tempat Lahir">
+                    <input type="date" id="tanggalLahir">
+                </td>
+            </tr>
+            <tr>
+                <td>No Telp:</td>
+                <td><input type="tel" id="noTelp" placeholder="Contoh: 0812-3456-7890"></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="email" id="email" placeholder="Masukkan Email"></td>
+            </tr>
+            <tr>
+                <td>Fakultas:</td>
+                <td>
+                    <select id="fakultas">
+                        <option value="" disabled selected>Pilih Fakultas</option>
+                        <option value="Fakultas Ilmu Pendidikan dan Ilmu Pengetahuan Sosial">Fakultas Ilmu Pendidikan dan Ilmu Pengetahuan Sosial</option>
+                        <option value="Fakultas Matematika">Fakultas Matematika</option>
+                        <option value="Fakultas Bahasa Dan Seni">Fakultas Bahasa Dan Seni</option>
+                        <option value="Fakultas Teknik dan Ilmu Komputer">Fakultas Teknik dan Ilmu Komputer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Prog. Studi:</td>
+                <td><input type="text" id="programStudi" placeholder="Masukkan Program Studi"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <input type="radio" name="jenisKelamin" value="Laki-Laki"> Laki-Laki
+                    <input type="radio" name="jenisKelamin" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Artikel Favorit:</td>
+                <td>
+                    <input type="checkbox" name="artikelFavorit" value="Kalimantan"> Pulau Kalimantan
+                    <input type="checkbox" name="artikelFavorit" value="Jawa"> Pulau Jawa
+                    <input type="checkbox" name="artikelFavorit" value="Sumatera"> Pulau Sumatera
+                    <input type="checkbox" name="artikelFavorit" value="Papua"> Pulau Papua
+                    <input type="checkbox" name="artikelFavorit" value="Sulawesi"> Pulau Sulawesi
+                </td>
+            </tr>
+            <tr>
+                <td>Kritik dan Saran:</td>
+                <td><textarea id="kritikSaran" placeholder="Masukkan Kritik dan Saran"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3px" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Cancel">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Mencegah form dikirim sebelum validasi
+            const namaLengkap = document.getElementById('namaLengkap').value.trim();
+            const tempatLahir = document.getElementById('tempatLahir').value.trim();
+            const tanggalLahir = document.getElementById('tanggalLahir').value.trim();
+            const noTelp = document.getElementById('noTelp').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const fakultas = document.getElementById('fakultas').value;
+            const programStudi = document.getElementById('programStudi').value.trim();
+            const jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked');
+            const kritikSaran = document.getElementById('kritikSaran').value.trim();
+            const artikelFavorit = document.querySelectorAll('input[name="artikelFavorit"]:checked');
+
+            // Validasi
+            if (!namaLengkap) {
+                alert("Nama lengkap wajib diisi.");
+                return;
+            }
+            if (!tempatLahir || !tanggalLahir) {
+                alert("Tempat dan tanggal lahir wajib diisi.");
+                return;
+            }
+            if (!noTelp) {
+                alert("Nomor telepon wajib diisi.");
+                return;
+            }
+            if (!email) {
+                alert("Email wajib diisi.");
+                return;
+            }
+            if (!fakultas) {
+                alert("Silakan pilih fakultas.");
+                return;
+            }
+            if (!programStudi) {
+                alert("Program studi wajib diisi.");
+                return;
+            }
+            if (!jenisKelamin) {
+                alert("Jenis kelamin wajib dipilih.");
+                return;
+            }
+            if (artikelFavorit.length === 0) {
+                alert("Pilih setidaknya satu artikel favorit.");
+                return;
+            }
+            if (!kritikSaran) {
+                alert("Kritik dan saran wajib diisi.");
+                return;
+            }
+
+            alert("Form berhasil disubmit.");
+            document.getElementById('feedbackForm').submit(); // Kirim form jika valid
+        }
+
+        // Pasang event listener
+        document.getElementById('feedbackForm').addEventListener('submit', validateForm);
+    </script>
+</body>
+</html>
+</body>
+</html>

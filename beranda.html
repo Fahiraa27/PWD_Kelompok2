@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunia Fauna Indonesia</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="Bg2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <title>Back to Top Button</title>
+    <style>
+                #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            padding: 10px 15px;
+            background: #d18f44;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Back to Top -->
+    <button id="back-to-top">↑</button>
+
+    <script>
+        // Tombol "Back to Top"
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Menampilkan/Menyembunyikan tombol saat pengguna menggulir
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Gulir kembali ke atas dengan efek halus saat tombol diklik
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <style>
+
+body {
+    font-family: 'VT323', Arial, sans-serif;
+    font-size: 19px;
+    color: white;
+    margin: 100;
+    padding: 10;
+}
+
+.background-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-image {
+    max-width: 80%;
+    height: auto;
+}
+
+p {
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.wildlife-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.wildlife-table th, .wildlife-table td {
+    border: 1px solid #444;
+    padding: 15px;
+}
+
+.wildlife-table th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.wildlife-table td ul, .wildlife-table td ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+        /* Gaya untuk scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px; /* Lebar scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f100; /* Warna track scrollbar */
+            border-radius: 90px; /* Membuat ujung track melengkung */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Warna thumb scrollbar */
+            border-radius: 90px; /* Membuat thumb melengkung */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #55555500; /* Warna thumb saat hover */
+        }
+
+        audio {
+            display: block;
+            margin: 20px auto;
+        }
+        img {
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    max-width: 100%;
+                    height: auto;
+                }
+        
+                img {
+                    width: 45%; /* Ukuran gambar */
+                }
+        /* Center the image and ensure it's responsive */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .image-container img {
+            width: 80%;  /* Adjust width to make it responsive */
+            max-width: 700px;  /* Maximum width */
+            opacity: 0.7;  /* Set opacity */
+            border-radius: 10px;  /* Optional: Adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: Adds shadow around the image */
+        }
+table {
+    
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: left;
+        font-family: 'VT323', Arial, sans-serif;
+    }
+
+    table th {
+        background-color: #3d607ed5;
+        color: #ffffff;
+        padding: 15px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    table td {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+    }
+
+    table tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    table ul, table ol {
+        margin: 0;
+        padding-left: 20px;
+        color: white;
+    }
+
+    table ul li, table ol li {
+        list-style: none;
+        margin-bottom: 5px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    table ul li::before {
+        content: "•";
+        color: #f0a500;
+        position: absolute;
+        left: 0;
+    }
+
+    table ol li::before {
+        content: counter(li);
+        counter-increment: li;
+        color: #f0a500;
+        position: absolute;
+        left: 0;
+    }
+
+    ol[type="1"] li::before {
+        content: counter(li, decimal) ".";
+    }
+
+    ol[type="A"] li::before {
+        content: counter(li, upper-alpha) ".";
+    }
+
+    ol[type="i"] li::before {
+        content: counter(li, lower-roman) ".";
+    }
+
+    </style>
+    <font color="white">
+        <br>
+        <center>
+            <img src="mapindo.png" alt="Deskripsi Gambar Peta Indonesia" width="700" style="opacity: 0.88;"/>
+        </center>
+        <div id="countdown" style="margin: 20px; padding: 10px; background: #6495ED; border: 1px solid #7283bb; color: white;">
+            Waktu menuju Hari Konservasi Satwa Langka: <span id="timer"></span>
+        </div>
+    
+        <script>
+            const countdown = document.getElementById("timer"); // Update untuk elemen span
+            const targetDate = new Date("2025-08-10T00:00:00").getTime(); // Pastikan format tanggal benar
+    
+            function updateCountdown() {
+                const now = new Date().getTime(); // Waktu sekarang
+                const distance = targetDate - now; // Selisih waktu
+    
+                // Hitung hari, jam, menit, dan detik
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Tampilkan hasil ke elemen dengan ID timer
+                countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    
+                // Jika waktu habis
+                if (distance < 0) {
+                    clearInterval(interval); // Hentikan interval
+                    countdown.innerHTML = "Acara telah dimulai!";
+                }
+            }
+    
+            // Jalankan updateCountdown setiap detik
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Jalankan sekali langsung
+        </script>
+        
+    <P>&nbsp Indonesia merupakan salah satu negara dengan keanekaragaman hayati terbesar di dunia,
+         menempati posisi penting dalam konservasi fauna global. Dengan lebih dari
+          17.000 pulau, negara ini menjadi rumah bagi berbagai spesies hewan endemik yang tidak
+           ditemukan di tempat lain di dunia. Dari Sabang hingga Merauke, Indonesia memiliki 
+           beragam ekosistem mulai dari hutan hujan tropis, savana, hingga lautan luas,
+            yang masing-masing menjadi habitat alami bagi satwa liar yang sangat beragam. </P>
+
+    <p>&nbsp Namun, kekayaan fauna Indonesia kini berada dalam ancaman serius. Laju deforestasi yang tinggi,
+         konversi lahan untuk industri, perubahan iklim, serta perburuan liar telah mengakibatkan
+          penurunan populasi berbagai spesies, terutama satwa-satwa langka. Beberapa di antaranya, 
+          seperti Harimau Sumatera, Badak Jawa, dan Orangutan Kalimantan, kini berada di ambang kepunahan.
+           Kehilangan habitat alami juga berdampak langsung terhadap keberlangsungan hidup mereka, 
+           memaksa satwa-satwa ini untuk beradaptasi di lingkungan yang semakin tidak ramah atau bahkan 
+           berpindah ke wilayah yang bukan habitat asli mereka. </p>
+
+    <P>&nbsp Pentingnya melindungi satwa langka tidak hanya demi kelestarian spesies itu sendiri, tetapi juga untuk 
+        menjaga keseimbangan ekosistem yang bergantung pada interaksi antara berbagai komponen alam.
+         Oleh karena itu, perlu ada upaya yang lebih intensif dan kolaboratif dari berbagai pihak, 
+         baik pemerintah, masyarakat, maupun organisasi internasional, untuk melindungi satwa langka dan 
+         habitat mereka. Penelitian, pengelolaan kawasan konservasi, serta kesadaran masyarakat akan 
+         pentingnya keberlanjutan ekosistem merupakan beberapa langkah yang harus terus diperkuat. </P>
+
+    <P>Berikut tabel satwa langka dan habitatnya di Indonesia:</P>
+
+    <table border="" align="center" cellpadding="20px" width="1100px">
+        <tr>
+            <th colspan="20px" border=""><font color="white">SATWA LANGKA DAN HABITATNYA</font></th>
+        </tr>
+        <tr>
+            <th><font color="white">Pulau Jawa</th>
+            <th><font color="white">Pulau Kalimantan</font></th>
+            <th><font color="white">Pulau Sumatera</font></th>
+            <th><font color="white">Pulau Sulawesi</font></th>
+            <th><font color="white">Pulau Papua</font></th>
+            
+        </tr>
+     
+        <!--ini isi hewan dari pulau jawa-->
+        <tr>
+            <td>
+                <ul style="color:white;">
+                    <li><font color="white">Owa Jawa</font></li>
+                    <li><font color="white">Elang Jawa</font></li>
+                    <li><font color="white">Badak jawa</font></li>
+                </ul>
+            </td>
+        
+        <!--ini isi hewan dari pulau kalimantan-->
+            <td>
+                <Ol style="color:white;" type="A">
+                    <li><font color="white">Bekantan</font></li>
+                    <li><font color="white">Kukang</font></li>
+                    <li><font color="white">Pesut Mahakam</font></li>
+                </0l>
+            </td>
+
+        <!--ini isi hewan dari pulau sumatera-->    
+            <td>
+                <Ol style="color:white;" type="1">
+                    <li><font color="white">Harimau Sumatera</font></li>
+                    <li><font color="white">Gajah Sumatera</font></li>
+                    <li><font color="white">Badak Sumatera</font></li>
+                </Ol>
+            </td>
+
+        <!--ini isi hewan dari pulau sulawesi-->    
+            <td>
+                <ul style="color:white;" type='square'>
+                    <li><font color="white">Anoa</font></li>
+                    <li><font color="white">Kuskus Beruang</font></li>
+                    <li><font color="white">Monyet Hitam</font></li>
+                </ul>
+            </td>
+
+        <!--ini isi hewan dari pulau papua-->    
+            <td>
+                <ol style="color:white;" type="i">
+                    <li><font color="white">Cendrawasih</font></li>
+                    <li><font color="white">Kasuari Gelambir Tunggal</font></li>
+                    <li><font color="white">Kangguru Pohon Mantel Emas</font></li>
+                </ol>
+            </td>
+            </tr>
+        </font>
+    </table>
+    <br>
+    <center>
+    <audio controls autoplay >
+        <source src="soundNCS.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    </center>
+</font>
+</body>
